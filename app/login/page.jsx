@@ -1,7 +1,7 @@
 import React from "react"
 import Login from "./Login"
 
-const page = ({userId}) => {
+const page = () => {
   return (
     <div>
       <Login />
