@@ -77,15 +77,12 @@ const ViewBook = ({ bookId, userId }) => {
   }
 
   const handleBack = () => {
-    window.location.href = `/admin/${userId}`;
+    window.history.back();
   };
 
   return (
     <>
       <article className="mt-0 pt-4">
-        <span role="button" className="secondary" onClick={handleBack}>
-          back to library
-        </span>
         <div className="pb-2"></div>
         <div>
           <h2>Book Details</h2>
@@ -183,6 +180,11 @@ const ViewBook = ({ bookId, userId }) => {
               Delete Book
             </span>
           </div>
+        </div>
+      </article>
+      <article>
+        <div>
+          <button className="contrast" onClick={handleBack}>Back to Library</button>
         </div>
       </article>
     </>
