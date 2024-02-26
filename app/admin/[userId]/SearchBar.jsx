@@ -62,7 +62,6 @@ const Searchbar = ({ userId }) => {
     try {
       const response = await axios.get(`/api/user/${userId}`);
       setCurrUserData(response.data);
-      // alert('yiay')
     } catch (error) {
       console.error("Error fetching user data:", error);
     }

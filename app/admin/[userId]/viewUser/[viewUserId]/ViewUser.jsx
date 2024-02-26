@@ -40,7 +40,7 @@ const ViewUser = ({ viewUserId, userId }) => {
   };
 
   const handleDeleteAccount = async () => {
-    if (window.confirm(`Are you sure you want to ${userData.name}'s account?`)) {
+    if (window.confirm(`Are you sure you want to ${userData.name}&apos;s account?`)) {
       try {
         const response = await axios.delete(`/api/deleteUser/${viewUserId}`);
         console.log(response.data.message);

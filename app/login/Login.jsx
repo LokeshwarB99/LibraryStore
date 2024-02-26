@@ -28,16 +28,16 @@ const Login = () => {
         } else {
           setError(data.error || "An error occurred");
         }
-        return; // Stop execution if there's an error
+        return; 
       }
 
       const { id,role } = await response.json();
       // alert(role)
       if (id !== -1) {
-        if (role === 'Customer') {
+        if (role === "Customer") {
           window.location.href = `/library/user/${id}`;
         }
-        if (role === 'Admin') {
+        if (role === "Admin") {
           window.location.href = `/admin/${id}`;
         }
       }
@@ -74,7 +74,7 @@ const Login = () => {
           <input type="submit" value="Login" />
         </form>
         <div>
-          Don't have an account? <a href="/signup">Signup here.</a>
+          Don&apos;t have an account? <a href="/signup">Signup here.</a>
         </div>
       </div>
     </article>
