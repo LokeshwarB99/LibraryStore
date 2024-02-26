@@ -365,6 +365,9 @@ const Searchbar = ({ userId }) => {
           <button type="submit">Add Book</button>
         </form>
       </article>
+      <article>
+        <button className="contrast" onClick={()=>window.location.href=`/admin/${userId}/addAdmin`}>Create Admin Account</button>
+      </article>
     </>
   );
 };

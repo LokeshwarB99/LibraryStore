@@ -36,7 +36,7 @@ const ViewUser = ({ viewUserId, userId }) => {
   }, [viewUserId]);
 
   const handleBackToLibrary = () => {
-    window.location.href = `/admin/${userId}`;
+    window.history.back()
   };
 
   const handleDeleteAccount = async () => {
@@ -58,9 +58,6 @@ const ViewUser = ({ viewUserId, userId }) => {
   return (
     <>
       <article className="mb-0 pb-0 mt-0">
-        <span role="button" className="secondary" onClick={handleBackToLibrary}>
-          back to library
-        </span>
       </article>
       <article className="flex justify-around mt-0 pt-0">
         <form action="" className="w-3/5">
@@ -92,7 +89,12 @@ const ViewUser = ({ viewUserId, userId }) => {
           <br />
         </form>
       </article>
-
+      <article>
+        <button role="button" className="contrast" onClick={handleBackToLibrary}>
+        Back to Library
+      </button>
+      </article>
+      
       <article className="flex justify-around mt-0">
         <div className="w-3/5">
           <h2 className="text-2xl font-semibold text-center">

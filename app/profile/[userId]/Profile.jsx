@@ -62,7 +62,7 @@ const Profile = ({ userId }) => {
   };
 
   const handleBackToLibrary = () => {
-    window.location.href=`/library/user/${userId}`
+    window.history.back();
   }
 
   if (!userDataLoaded) {
@@ -71,12 +71,7 @@ const Profile = ({ userId }) => {
 
   return (
     <>
-      <article className="mb-0 pb-0">
-        <span role="button" className="secondary" onClick={handleBackToLibrary}>
-          back to library
-        </span>
-      </article>
-      <article className="flex justify-around mt-0 pt-0">
+      <article className="flex justify-around mt-0">
         {userDataLoaded && (
           <form action="" className="w-3/5">
             {successMessage && (
@@ -132,6 +127,11 @@ const Profile = ({ userId }) => {
             </div>
           </form>
         )}
+      </article>
+      <article>
+        <button role="button" className="contrast" onClick={handleBackToLibrary}>
+          Back to Library
+        </button>
       </article>
     </>
   );
